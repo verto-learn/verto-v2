@@ -1,7 +1,6 @@
 'use client';
 
 import { useDemoData } from "@/hooks/use-demo-data";
-import { ModeToggle } from "../ui/mode-toggle";
 
 export default function HomeView() {
   const { data, isLoading, error, showToast } = useDemoData();
@@ -17,8 +16,6 @@ export default function HomeView() {
         <div className="p-4 border rounded">
           Data: {data?.message}
         </div>
-
-        <ModeToggle />
         <button
           onClick={showToast}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition"
